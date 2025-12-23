@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="PhysHuman: Physically Grounded Human Perception and Modeling Workshop @ CVPR 2026">
+  <meta name="keywords" content="PhysHuman, CVPR 2026, Workshop, Human Modeling, Biomechanics, Physics-informed Vision">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PhysHuman Workshop @ CVPR 2026</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.ico">
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="#abstract">Abstract</a>
+      <a class="navbar-item" href="#speakers">Speakers</a>
+      <a class="navbar-item" href="#schedule">Schedule</a>
+      <a class="navbar-item" href="#call-for-papers">Call for Papers</a>
+      <a class="navbar-item" href="#organizers">Organizers</a>
+    </div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <p class="subtitle is-5" style="color: #5a5a5a;">The 1st Workshop on</p>
+          <h1 class="title is-1 publication-title">PhysHuman</h1>
+          <h2 class="subtitle is-3">Physically Grounded Human Perception and Modeling</h2>
+          <p class="subtitle is-5">
+            <strong>in conjunction with CVPR 2026, Denver, CO</strong><br>
+            <span style="color: #666;">Date: TBD (Half-Day Workshop)</span>
+          </p>
+          <div class="buttons is-centered" style="margin-top: 1.5rem;">
+            <a class="button is-medium is-link" href="#call-for-papers">
+              <span class="icon"><i class="fas fa-file-alt"></i></span>
+              <span>Submit Paper</span>
+            </a>
+            <a class="button is-medium is-dark" href="#abstract">
+              <span class="icon"><i class="fas fa-info-circle"></i></span>
+              <span>Learn More</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="abstract">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Abstract</h2>
+    <div class="content has-text-justified">
+      <p>
+        <strong>Overview:</strong> Vision, graphics, and generative models can now reconstruct and synthesize humans with high visual fidelity. However, they rarely model how bodies should move under real-world physical constraints, such as contact, friction, joint limits, muscle effort, ground reaction forces (GRF), and center-of-mass (CoM) dynamics.
+      </p>
+      <p>
+        This workshop brings together computer vision, biomechanics, simulation, sports/rehabilitation, and XR researchers to make these physics quantities first-class targets for learning from video, IMU, and multimodal data. We will discuss datasets, metrics, and toolchains (e.g., <a href="https://opensim.stanford.edu/">OpenSim</a>, <a href="https://mujoco.org/">MuJoCo</a>, <a href="https://sites.google.com/view/myosuite">MyoSuite</a>) that enable benchmarking of physical plausibility, and we will highlight applications in sports, clinical assessment, ergonomics, and safe human–digital interaction.
+      </p>
+    </div>
+
+    <h3 class="title is-4" style="margin-top: 2rem;">Focus of the Workshop</h3>
+    <div class="content">
+      <div class="columns is-multiline">
+        <div class="column is-6">
+          <div class="box">
+            <h4 class="title is-5"><i class="fas fa-bolt" style="color: #3273dc;"></i> Physics-Based Estimation</h4>
+            <p>Vision-based estimation of physical quantities: GRF/CoM, joint torques/moments, and contact/friction states from video and sensors.</p>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="box">
+            <h4 class="title is-5"><i class="fas fa-user" style="color: #3273dc;"></i> Human Modeling</h4>
+            <p>Physically grounded 3D human/body/face modeling, including musculoskeletal and soft-tissue (skin-slide) models.</p>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="box">
+            <h4 class="title is-5"><i class="fas fa-robot" style="color: #3273dc;"></i> Wearables & Exoskeletons</h4>
+            <p>Modeling human + wearables/exoskeletons/footwear as a coupled physical system for rehabilitation and performance.</p>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="box">
+            <h4 class="title is-5"><i class="fas fa-hand-paper" style="color: #3273dc;"></i> Human-Object Interaction</h4>
+            <p>Physics-based contact reasoning, force estimation, and manipulation-aware motion understanding.</p>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="box">
+            <h4 class="title is-5"><i class="fas fa-tshirt" style="color: #3273dc;"></i> Garment & Material</h4>
+            <p>Physics-aware garment modeling for dynamic cloth–body interaction, deformation, and draping under physical constraints.</p>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="box">
+            <h4 class="title is-5"><i class="fas fa-running" style="color: #3273dc;"></i> Motion Generation</h4>
+            <p>Physics-aware motion, pose, and avatar generation with joint limits and energetic/effort priors.</p>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="box">
+            <h4 class="title is-5"><i class="fas fa-cogs" style="color: #3273dc;"></i> Simulation Alignment</h4>
+            <p>Aligning OpenSim, MuJoCo, MyoSuite with in-the-wild video, IMUs, and RGB-D data.</p>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="box">
+            <h4 class="title is-5"><i class="fas fa-chart-bar" style="color: #3273dc;"></i> Datasets & Benchmarks</h4>
+            <p>Metrics for physical plausibility: contact-violation, stability indices, GRF error, energy-consistency.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="speakers" style="background-color: #f5f5f5;">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Invited Speakers</h2>
+    
+    <div class="columns is-multiline is-centered">
+      <div class="column is-one-third">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-1by1">
+              <img src="./static/images/placeholder.png" alt="Ehsan Adeli">
+            </figure>
+          </div>
+          <div class="card-content has-text-centered">
+            <p class="title is-5"><a href="#">Ehsan Adeli</a></p>
+            <p class="subtitle is-6">Stanford University</p>
+            <p class="is-size-7">Digital health & rehabilitation</p>
+            <span class="tag is-success is-light">Confirmed</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-one-third">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-1by1">
+              <img src="./static/images/placeholder.png" alt="Dima Damen">
+            </figure>
+          </div>
+          <div class="card-content has-text-centered">
+            <p class="title is-5"><a href="#">Dima Damen</a></p>
+            <p class="subtitle is-6">University of Bristol & Google DeepMind</p>
+            <p class="is-size-7">Egocentric vision & interaction</p>
+            <span class="tag is-success is-light">Confirmed</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-one-third">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-1by1">
+              <img src="./static/images/placeholder.png" alt="Xin (Shane) Li">
+            </figure>
+          </div>
+          <div class="card-content has-text-centered">
+            <p class="title is-5"><a href="#">Xin (Shane) Li</a></p>
+            <p class="subtitle is-6">Texas A&M University</p>
+            <p class="is-size-7">3D reconstruction & avatars</p>
+            <span class="tag is-success is-light">Confirmed</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-one-third">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-1by1">
+              <img src="./static/images/placeholder.png" alt="Christian Theobalt">
+            </figure>
+          </div>
+          <div class="card-content has-text-centered">
+            <p class="title is-5"><a href="#">Christian Theobalt</a></p>
+            <p class="subtitle is-6">MPI for Informatics</p>
+            <p class="is-size-7">Human capture & neural avatars</p>
+            <span class="tag is-success is-light">Confirmed</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-one-third">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-1by1">
+              <img src="./static/images/placeholder.png" alt="Jiajun Wu">
+            </figure>
+          </div>
+          <div class="card-content has-text-centered">
+            <p class="title is-5"><a href="https://jiajunwu.com/">Jiajun Wu</a></p>
+            <p class="subtitle is-6">Stanford University</p>
+            <p class="is-size-7">Physical scene understanding</p>
+            <span class="tag is-success is-light">Confirmed</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-one-third">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-1by1">
+              <img src="./static/images/placeholder.png" alt="Thabo Beeler">
+            </figure>
+          </div>
+          <div class="card-content has-text-centered">
+            <p class="title is-5"><a href="#">Thabo Beeler</a></p>
+            <p class="subtitle is-6">Google</p>
+            <p class="is-size-7">High-fidelity human digitization</p>
+            <span class="tag is-warning is-light">Tentative</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="schedule">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Schedule</h2>
+    <p class="has-text-centered" style="margin-bottom: 2rem; color: #666;">
+      Half-Day Workshop (Morning Session, Tentative)
+    </p>
+
+    <table class="table is-fullwidth is-hoverable">
+      <thead>
+        <tr>
+          <th style="width: 150px;">Time</th>
+          <th>Event</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>8:30 - 8:40</strong></td>
+          <td>Opening Remarks</td>
+        </tr>
+        <tr>
+          <td><strong>8:40 - 9:05</strong></td>
+          <td>Invited Speaker 1</td>
+        </tr>
+        <tr>
+          <td><strong>9:05 - 9:30</strong></td>
+          <td>Invited Speaker 2</td>
+        </tr>
+        <tr>
+          <td><strong>9:30 - 9:55</strong></td>
+          <td>Invited Speaker 3</td>
+        </tr>
+        <tr style="background-color: #f0f0f0;">
+          <td><strong>9:55 - 10:10</strong></td>
+          <td>☕ Coffee Break</td>
+        </tr>
+        <tr>
+          <td><strong>10:10 - 10:35</strong></td>
+          <td>Invited Speaker 4</td>
+        </tr>
+        <tr>
+          <td><strong>10:35 - 11:00</strong></td>
+          <td>Invited Speaker 5</td>
+        </tr>
+        <tr>
+          <td><strong>11:00 - 11:25</strong></td>
+          <td>Invited Speaker 6</td>
+        </tr>
+        <tr>
+          <td><strong>11:25 - 11:55</strong></td>
+          <td>Spotlights & Q&A</td>
+        </tr>
+        <tr style="background-color: #f0f0f0;">
+          <td><strong>11:55 - 12:45</strong></td>
+          <td>🎯 Posters / Informal Discussion</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+<section class="section" id="call-for-papers" style="background-color: #f5f5f5;">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Call for Papers</h2>
+    
+    <div class="content has-text-justified">
+      <p>
+        We invite both short (up to 4 pages) and long (up to 8 pages) paper submissions, excluding references and supplementary materials. Submissions must follow the <a href="https://cvpr.thecvf.com/">CVPR 2026</a> template.
+      </p>
+
+      <div class="columns" style="margin-top: 2rem;">
+        <div class="column">
+          <div class="box">
+            <h4 class="title is-5">📄 Full Papers (Archival)</h4>
+            <p>Up to 8 pages excluding references. Will be included in the CVPR 2026 workshop proceedings.</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="box">
+            <h4 class="title is-5">📝 Short Papers (Non-Archival)</h4>
+            <p>Up to 4 pages for work-in-progress, negative results, demos, and challenge-style reports.</p>
+          </div>
+        </div>
+      </div>
+
+      <p>
+        All accepted papers will be presented as posters, with selected papers featured as spotlight talks. A best paper award will be presented.
+      </p>
+    </div>
+
+    <h3 class="title is-4" style="margin-top: 2rem;">Important Dates</h3>
+    <table class="table is-fullwidth">
+      <tbody>
+        <tr>
+          <td><strong>Submission Deadline</strong></td>
+          <td>March 6, 2026</td>
+        </tr>
+        <tr>
+          <td><strong>Author Notification</strong></td>
+          <td>March 27, 2026</td>
+        </tr>
+        <tr>
+          <td><strong>Camera-Ready</strong></td>
+          <td>April 8, 2026</td>
+        </tr>
+        <tr>
+          <td><strong>Workshop Date</strong></td>
+          <td>June 2026 (TBD)</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="is-size-7" style="color: #666;">All deadlines are 11:59 PM Pacific Time.</p>
+
+    <div class="has-text-centered" style="margin-top: 2rem;">
+      <a class="button is-link is-medium" href="#">
+        <span class="icon"><i class="fas fa-external-link-alt"></i></span>
+        <span>Submit on OpenReview</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="organizers">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Organizers</h2>
+    
+    <div class="columns is-multiline is-centered">
+      <div class="column is-one-fifth has-text-centered">
+        <figure class="image is-128x128" style="margin: 0 auto;">
+          <img class="is-rounded" src="./static/images/placeholder.png" alt="Feng Liu">
+        </figure>
+        <p class="title is-6" style="margin-top: 0.5rem;"><a href="mailto:fl397@drexel.edu">Feng Liu</a></p>
+        <p class="subtitle is-7">Drexel University</p>
+      </div>
+
+      <div class="column is-one-fifth has-text-centered">
+        <figure class="image is-128x128" style="margin: 0 auto;">
+          <img class="is-rounded" src="./static/images/placeholder.png" alt="Youngjoong Kwon">
+        </figure>
+        <p class="title is-6" style="margin-top: 0.5rem;"><a href="#">Youngjoong Kwon</a></p>
+        <p class="subtitle is-7">Emory University</p>
+      </div>
+
+      <div class="column is-one-fifth has-text-centered">
+        <figure class="image is-128x128" style="margin: 0 auto;">
+          <img class="is-rounded" src="./static/images/placeholder.png" alt="Cheng Zhang">
+        </figure>
+        <p class="title is-6" style="margin-top: 0.5rem;"><a href="#">Cheng Zhang</a></p>
+        <p class="subtitle is-7">Texas A&M University</p>
+      </div>
+
+      <div class="column is-one-fifth has-text-centered">
+        <figure class="image is-128x128" style="margin: 0 auto;">
+          <img class="is-rounded" src="./static/images/placeholder.png" alt="Jun Liu">
+        </figure>
+        <p class="title is-6" style="margin-top: 0.5rem;"><a href="#">Jun Liu</a></p>
+        <p class="subtitle is-7">Lancaster University</p>
+      </div>
+
+      <div class="column is-one-fifth has-text-centered">
+        <figure class="image is-128x128" style="margin: 0 auto;">
+          <img class="is-rounded" src="./static/images/placeholder.png" alt="Thabo Beeler">
+        </figure>
+        <p class="title is-6" style="margin-top: 0.5rem;"><a href="#">Thabo Beeler</a></p>
+        <p class="subtitle is-7">Google AR</p>
+      </div>
+
+      <div class="column is-one-fifth has-text-centered">
+        <figure class="image is-128x128" style="margin: 0 auto;">
+          <img class="is-rounded" src="./static/images/placeholder.png" alt="Xiaoming Liu">
+        </figure>
+        <p class="title is-6" style="margin-top: 0.5rem;"><a href="#">Xiaoming Liu</a></p>
+        <p class="subtitle is-7">Michigan State University</p>
+      </div>
+
+      <div class="column is-one-fifth has-text-centered">
+        <figure class="image is-128x128" style="margin: 0 auto;">
+          <img class="is-rounded" src="./static/images/placeholder.png" alt="Fernando De la Torre">
+        </figure>
+        <p class="title is-6" style="margin-top: 0.5rem;"><a href="#">Fernando De la Torre</a></p>
+        <p class="subtitle is-7">Carnegie Mellon University</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="committee" style="background-color: #f5f5f5;">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Program Committee</h2>
+    <div class="content has-text-centered">
+      <p>
+        Yuyang Ji (Drexel), Yixuan Shen (Drexel), Bill Cai (Drexel), Amirhosein Chahe (Drexel), 
+        Zhihao Zhang (MSU), Yiyang Su (MSU), Yuanhao Wang (UW), Ding-Jiun Huang (CMU), 
+        Haoye Dong (NUS), Yunlu Chen (KAUST), Fengzhi Guo (TAMU), Shiqi Li (TAMU), 
+        Yilin Xu (JHU), Chanyoung Kim (Yonsei)
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Contact:</strong> <a href="mailto:fl397@drexel.edu">fl397@drexel.edu</a>, 
+        <a href="mailto:youngjoong.kwon@emory.edu">youngjoong.kwon@emory.edu</a>,
+        <a href="mailto:chzhang@tamu.edu">chzhang@tamu.edu</a>
+      </p>
+      <p>
+        This website is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+      <p>
+        Website template borrowed from <a href="https://nerfies.github.io">Nerfies</a> and <a href="https://e2e3d.github.io">E2E3D</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
